@@ -1,36 +1,18 @@
-# AI Ticket Triage
+# phloristikaa prakt
 
-CLI-приложение классифицирует обращение в поддержку и сохраняет проверенный JSON.
+Репозиторий для практических заданий. Текущая работа: `llm_ticket_triage`.
 
-## Установка
+## Запуск текущего задания
+
+Требуется Python 3.10 или новее.
 
 ```powershell
+cd llm_ticket_triage
 python -m venv .venv
 .venv\Scripts\Activate.ps1
 python -m pip install -r requirements.txt
-```
-
-## Mock-режим
-
-```powershell
-python app.py --mock "С меня дважды списали оплату за один заказ"
-```
-
-Если текст не передан аргументом, приложение запросит его через `input()`.
-
-## Тесты
-
-```powershell
+python app.py --mock
 python -m unittest discover -s tests -v
 ```
 
-## Реальный API
-
-Скопируйте `.env.example` в `.env` и укажите настройки совместимого Chat Completions API. Не добавляйте `.env` в Git.
-
-```powershell
-Copy-Item .env.example .env
-python app.py --real "С меня дважды списали оплату за один заказ"
-```
-
-Успешный результат записывается в `output/result.json`. Папка `output` не добавляется в Git.
+Для запуска других заданий добавляйте отдельные папки в корень репозитория.
